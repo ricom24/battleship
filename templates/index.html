@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>Battleship Game</title>
+    </head>
+	<body>
+	<h1><font color="blue">WELCOME TO BATTLESHIP</font></h1>
+	<br>
+	{% for row in lst %}
+	<h2>{{ row }}</h2>
+	{% endfor %}
+	<br>	
+		<form action = "{{ url_for('calculate') }}" method="POST">
+		<table>
+			<tr>
+				<td>
+					<input name = "row">
+				</td>
+				<td>
+					<input name = "col">
+				</td>				
+			</tr>
+		</table>
+		<input type = "submit" value = "ENTER">
+		<br>
+	</body>
+
+
+</html>
+
